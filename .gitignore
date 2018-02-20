@@ -1,6 +1,6 @@
 # Config
-config/default.json
-
+config/keys/
+mypass.pkpass
 # Logs
 logs
 *.log

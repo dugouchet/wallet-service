@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pem:generation": "openssl pkcs12 -in config/keys/pass.p12 -out config/keys/pass.pem -nodes"
+    "pem:generation": "openssl pkcs12 -in config/keys/pass.p12 -out config/keys/com.thefork.booking.pem -nodes"
   },
   "repository": {
     "type": "git",
