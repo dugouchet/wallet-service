@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pem:generation": "openssl pkcs12 -in config/keys/pass.p12 -out config/keys/com.thefork.booking.pem -nodes"
   },
   "repository": {
     "type": "git",
@@ -14,6 +16,14 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dugouchet/wallet-service/issues"
+  },
+  "dependencies": {
+    "@thefork/node-logger": "git+ssh://git@github.com/lafourchette/node-logger.git#v1.1.1",
+    "@thefork/service-platform": "git+ssh://git@github.com/lafourchette/node-service-platform.git#v1.11.0",
+    "busbud-passbook": "git+https://github.com/busbud/node-passbook.git",
+    "dnscache": "1.0.1",
+    "moment": "2.20.1",
+    "newrelic": "^2.0.2"
   },
   "homepage": "https://github.com/dugouchet/wallet-service#readme"
 }
