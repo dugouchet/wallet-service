@@ -8,6 +8,17 @@ require('newrelic');
   cachesize: 1000,
 });
 
-const gateway = require('./gateway');
+const service = require('./service');
 
-gateway.start();
+service
+  .start()
+  .tap(() => console.log("start promise resolved"))
+  .tap(service => service.injectJsonRpc("insertPkpass", {
+    payload: {
+      name: "toto",
+      restaurantName: "resto",
+    }
+  }))
+  .tapCatch((err)=>console.error(err.stack))
+;
+
