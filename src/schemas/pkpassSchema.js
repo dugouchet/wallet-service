@@ -72,7 +72,7 @@ const embedKeys = {
 };
 
 const createPkpassSchema = Joi.object()
-  .keys(Object.assign(responseKeys, commonKeys, embedKeys))
+  .keys(Object.assign(commonKeys, embedKeys))
   .label('Reservation with optional embeds');
 
 module.exports = {
