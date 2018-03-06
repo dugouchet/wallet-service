@@ -13,6 +13,8 @@ module.exports = {
     handler: ({payload}, databaseClient) => {
       console.log('INPUT !!!',payload);
 
+      console.log('this', this);
+
       return generatePkpass(payload);
     }
   }

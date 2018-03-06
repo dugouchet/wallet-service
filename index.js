@@ -2,12 +2,6 @@
 
 require('newrelic');
 
-  require('dnscache')({
-  enable: true,
-  ttl: 300,
-  cachesize: 1000,
-});
-
 const service = require('./service');
 
 service
@@ -21,4 +15,3 @@ service
   // }))
   .tapCatch((err)=>console.error(err.stack))
 ;
-
