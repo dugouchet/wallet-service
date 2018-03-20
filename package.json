@@ -20,6 +20,7 @@
   "dependencies": {
     "@thefork/node-logger": "git+ssh://git@github.com/lafourchette/node-logger.git#v1.1.1",
     "@thefork/service-platform": "git+ssh://git@github.com/lafourchette/node-service-platform.git#v1.11.0",
+    "body-parser": "1.18.2",
     "busbud-passbook": "git+https://github.com/busbud/node-passbook.git",
     "dnscache": "1.0.1",
     "moment": "2.20.1",

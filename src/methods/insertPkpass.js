@@ -11,8 +11,6 @@ module.exports = {
       payload: createPkpassSchema
     },
     handler: ({payload}, databaseClient) => {
-      console.log('INPUT !!!',payload);
-
       return generatePkpass(payload);
     }
   }
