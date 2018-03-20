@@ -31,13 +31,17 @@ const service = createService({
 service.connect.use(bodyParser.json());
 
 service.connect.use('/foo', function fooMiddleware(req, res, next) {
+  Joi.validate(req.body, createPkpassSchema, function (err, value) {
+    if (err) {
+      res.statusCode = 400;
+      res.end();
+    }
 
-  generatePkpass(req.body).render(res, function(error) {
-    if (error)
-      console.error(error);
+     generatePkpass(req.body).render(res, function(error) {
+        if (error)
+          console.error(error);
+     });
   });
-
-  // next();
 });
 
 // not use because it's not a json-rpc service anymore
